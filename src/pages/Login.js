@@ -44,7 +44,7 @@ class Login extends React.Component {
           <button
             data-testid="login-submit-button"
             disabled={ isDisable }
-            type="submit"
+            type="button"
             onClick={ this.handleClick }
           >
             Entrar
