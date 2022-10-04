@@ -15,8 +15,8 @@ class Login extends React.Component {
     }, () => {
       const { user } = this.state;
       const minLength = 3;
-      const teste = user.length < minLength;
-      this.setState({ isDisable: teste });
+      const validation = user.length < minLength;
+      this.setState({ isDisable: validation });
     });
   };
 
