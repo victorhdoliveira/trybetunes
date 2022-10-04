@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../components/Header';
 import Loading from '../components/Loading';
 import getMusics from '../services/musicsAPI';
 
@@ -22,7 +23,7 @@ class Search extends React.Component {
           loading ? (
             <Loading />
           ) : (
-            ''
+            <Header />
           )
         }
       </div>
