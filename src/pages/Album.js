@@ -19,7 +19,7 @@ class Album extends React.Component {
     const fetchMusics = await getMusics(id);
     const findCollection = fetchMusics[0];
     const findMusics = fetchMusics.filter((music, index) => index !== 0);
-    console.log(findCollection);
+    // console.log(findMusics);
     this.setState({
       albumData: findCollection,
       musicsList: findMusics,
@@ -37,7 +37,11 @@ class Album extends React.Component {
         {
           musicsList.map((music, index) => (
             <div key={ index }>
-              <MusicCard track={ music.trackName } preview={ music.previewUrl } />
+              <MusicCard
+                track={ music.trackName }
+                preview={ music.previewUrl }
+                trackId={ music.trackId }
+              />
             </div>
           ))
         }

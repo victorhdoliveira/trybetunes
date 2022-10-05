@@ -27,23 +27,21 @@ class Header extends React.Component {
           </p>
         </header>
         <nav>
-          <ul>
-            <li>
-              <Link to="/search" data-testid="link-to-search">
-                Pesquisar
-              </Link>
-            </li>
-            <li>
-              <Link to="/favorites" data-testid="link-to-favorites">
-                Favoritas
-              </Link>
-            </li>
-            <li>
-              <Link to="/profile" data-testid="link-to-profile">
-                Perfil
-              </Link>
-            </li>
-          </ul>
+          <p>
+            <Link to="/search" data-testid="link-to-search">
+              Pesquisar
+            </Link>
+          </p>
+          <p>
+            <Link to="/favorites" data-testid="link-to-favorites">
+              Favoritas
+            </Link>
+          </p>
+          <p>
+            <Link to="/profile" data-testid="link-to-profile">
+              Perfil
+            </Link>
+          </p>
         </nav>
       </section>
     );
