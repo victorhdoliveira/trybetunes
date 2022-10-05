@@ -23,7 +23,7 @@ class Header extends React.Component {
       <section>
         <header data-testid="header-component">
           <p data-testid="header-user-name">
-            { loading ? <Loading /> : user }
+            { loading ? <Loading /> : `Olá, ${user}!` }
           </p>
         </header>
         <nav>
