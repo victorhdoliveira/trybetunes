@@ -1,5 +1,7 @@
 import React from 'react';
+import { HiUserCircle } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
+import logo from '../imagem/logoRoxo.png';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
 
@@ -20,26 +22,28 @@ class Header extends React.Component {
   render() {
     const { user, loading } = this.state;
     return (
-      <section>
+      <section className="headerSection">
         <header data-testid="header-component">
-          <p data-testid="header-user-name">
-            { loading ? <Loading /> : `Olá, ${user}!` }
-          </p>
+          <div data-testid="header-user-name">
+            { loading ? <Loading /> : '' }
+          </div>
         </header>
         <nav>
-          <p>
-            <Link to="/search" data-testid="link-to-search">
+          <img src={ logo } alt="logo" className="headerLogo" />
+          <p className="headerBackG">
+            <Link to="/search" data-testid="link-to-search" className="links">
               Pesquisar
             </Link>
           </p>
-          <p>
-            <Link to="/favorites" data-testid="link-to-favorites">
+          <p className="headerBackG">
+            <Link to="/favorites" data-testid="link-to-favorites" className="links">
               Favoritas
             </Link>
           </p>
-          <p>
-            <Link to="/profile" data-testid="link-to-profile">
-              Perfil
+          <p className="profile">
+            <HiUserCircle className="profileIcon" />
+            <Link to="/profile" data-testid="link-to-profile" className="profileLink">
+              { user }
             </Link>
           </p>
         </nav>

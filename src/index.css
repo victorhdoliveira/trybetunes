@@ -1,18 +1,283 @@
 body {
+  background-color: rgba(0, 0, 0, 0.89);
+  color: whitesmoke;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: monospace, Menlo, Monaco, Consolas, 'Courier New';
+.loginPage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 300px;
+  /* width: 300px; */
+  /* height: 500px; */
+  /* border: 1px solid #09e8f0;
+  background-color: rgba(0, 0, 0, 0.24); */
+}
+
+.loginForm {
+  align-content: center;
+  margin-top: 30px;
+}
+
+.loginInput {
+  width: 200px;
+  height: 15px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
+  border: 2px solid  rgb(84, 25, 122);
+  background-color: rgba(245, 245, 245, 0.75);
+  font-family: monospace;
+  font-size: small;
+}
+
+.loginInput:focus {
+  background-color: white;
+  outline: none;
+  font-size: medium;
+}
+
+.loginLogo {
+  width: 300px;
+  height: 200px;
+  text-align: center;
+}
+
+.btnInput {
+  border-radius: 5px;
+  border: 2px solid  rgb(84, 25, 122);
+  background-color:  rgba(245, 245, 245, 0.75);
+  height: 28px;
+}
+
+.btnInput:enabled {
+  background-color: rgb(84, 25, 122);
+  color: rgba(245, 245, 245, 0.925);
+}
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  margin-top: 100px;
+}
+
+.searchInput {
+  width: 250px;
+  height: 15px;
+  font-family: sans-serif;
+  padding: 5px;
+  margin-right: 7px;
+  border-radius: 5px;
+  border: 2px solid  rgb(84, 25, 122);
+  background-color:  rgba(245, 245, 245, 0.925);
+}
+
+.searchInput:focus {
+  background-color: white;
+  outline: none;
+}
+ 
+.searchBtn {
+  border-radius: 5px;
+  height: 90%;
+  font-family: sans-serif;
+  background-color:  rgba(245, 245, 245, 0.384);
+  color: black;
+  font-weight: 200;
+}
+
+.searchBtn:enabled {
+  background-color: rgb(84, 25, 122);
+  color: rgba(245, 245, 245, 0.925);
+  border: 2px black;
+}
+
+.albumsResult {
+  text-align: center;
+  height: 75px;
+  margin-top: 50px;
+  font-family: monospace;
+}
+
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  align-content: flex-start;
+}
+
+.album {
+  margin: 10px 20px;
+}
+
+.album:hover {
+  font-weight: 700;
+}
+
+.albumName {
+  width: 100px;
+  color: rgba(143, 142, 142, 0.822);
+  font-family: monospace;
+}
+
+.albumImg {
+  width: 120px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.headerSection {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .loading {
+  margin-left: 47%;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.363);
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
+  height: 75px;
+  font-family: monospace;
+}
+
+.headerBackG {
+  height: 100%;
+}
+
+.headerBackG:hover {
+  background-color: black;
+}
+
+.links {
+  color: whitesmoke;
+  text-decoration: none;
+  width: 350px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.headerLogo {
+  width: 100px;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.profile {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 350px;
 }
+
+.profileLink {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.profileIcon {
+  padding: 5px;
+  width: 18px;
+  height: 18px;
+  color: whitesmoke;
+}
+
+.profile:hover{
+  background-color: black;
+}
+
+.sectionMusic {
+  text-align: center;
+  font-family:'Gill Sans';
+}
+
+.AlbumImg {
+  width: 115px;
+  height: 115px;
+  margin-top: 50px;
+  border-radius: 5%;
+}
+
+.artist {
+  margin-bottom: 50px;
+  font-family:monospace;
+}
+
+.music {
+  margin-top: 25px;
+  font-family:monospace;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+
+input[type="checkbox"] {
+  position: relative;
+  padding-left: 35px;
+  display: inline-block;
+  font-size: 19.5px;
+}
+
+input[type="checkbox"]:before {
+  content: "\1F5A4";
+  top: -15px;
+  left: -16.5px;
+  border: 1px solid transparent;    
+  padding: 10px;
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+transition:  .5s ease;
+}
+
+input[type="checkbox"]:checked:before {
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+input[type="checkbox"]:checked:after {
+  content: '\1f49C';
+  font-size: 20.5px;
+  position: absolute;
+  top: -5px;
+  left: -5.5px;
+/* color: rgb(107, 122, 25); */
+transition:  .5s ease;
+}
+
+.fav {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-left: 150px;
+}
+
+.favAlbuns {
+  margin: 0px 40px;
+}
+
+.favImg {
+  margin-top: 50px;
+  font-family:monospace;
+  border-radius: 5%;
+}
+
+.notFav {
+  margin-left: 40%;
+  margin-top: 100px;
+}
+

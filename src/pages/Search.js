@@ -28,12 +28,11 @@ class Search extends React.Component {
   handleClick = async () => {
     const { artistName } = this.state;
     const albumsData = await searchAlbumsAPI(artistName);
-    // console.log(albumsData);
     this.setState({
       albums: albumsData,
       artistName: '',
       loading: true,
-      phrase: `Resultado de álbuns de: ${artistName}`,
+      phrase: `Álbuns de ${artistName}`,
       notFound: 'nenhum álbum foi encontrado',
     });
   };
@@ -44,7 +43,7 @@ class Search extends React.Component {
     return (
       <div data-testid="page-search">
         <Header />
-        <form>
+        <form className="searchForm">
           <label htmlFor="search">
             <input
               data-testid="search-artist-input"
@@ -55,33 +54,41 @@ class Search extends React.Component {
               placeholder="Nome do Artista"
               onChange={ this.handleChangeSearchArtist }
               autoComplete="off"
+              className="searchInput"
             />
             <button
               data-testid="search-artist-button"
               type="button"
               disabled={ isDisable }
               onClick={ this.handleClick }
+              className="searchBtn"
             >
               Pesquisar
             </button>
           </label>
         </form>
-        <h2>{ phrase }</h2>
-        { albums.length && loading ? (
-          albums.map((album, index) => (
-            <div key={ index }>
-              <Link
-                to={ `/album/${album.collectionId}` }
-                data-testid={ `link-to-album-${album.collectionId}` }
-              >
-                <img src={ album.artworkUrl100 } alt={ album.collectionId } />
-              </Link>
-              <p>
-                { album.collectionName }
-              </p>
-            </div>
-          ))
-        ) : <h2>{notFound}</h2>}
+        <h2 className="albumsResult">{ phrase }</h2>
+        <div className="albums">
+          { albums.length && loading ? (
+            albums.map((album, index) => (
+              <div key={ index } className="album">
+                <Link
+                  to={ `/album/${album.collectionId}` }
+                  data-testid={ `link-to-album-${album.collectionId}` }
+                >
+                  <img
+                    src={ album.artworkUrl100 }
+                    alt={ album.collectionId }
+                    className="albumImg"
+                  />
+                </Link>
+                <p className="albumName">
+                  { album.collectionName }
+                </p>
+              </div>
+            ))
+          ) : <h2>{notFound}</h2>}
+        </div>
       </div>
     );
   }
