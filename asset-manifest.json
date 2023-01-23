@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/trybetunes/static/css/main.35935c37.css",
-    "main.js": "/trybetunes/static/js/main.b304d5be.js",
+    "main.js": "/trybetunes/static/js/main.074b461f.js",
     "static/media/logoRoxo.png": "/trybetunes/static/media/logoRoxo.d5b119612274c51fedcc.png",
     "index.html": "/trybetunes/index.html",
     "main.35935c37.css.map": "/trybetunes/static/css/main.35935c37.css.map",
-    "main.b304d5be.js.map": "/trybetunes/static/js/main.b304d5be.js.map"
+    "main.074b461f.js.map": "/trybetunes/static/js/main.074b461f.js.map"
   },
   "entrypoints": [
     "static/css/main.35935c37.css",
-    "static/js/main.b304d5be.js"
+    "static/js/main.074b461f.js"
   ]
 }
