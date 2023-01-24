@@ -22,6 +22,7 @@ Também sendo possível pesquisar por artista, criar uma lista de de músicas fa
    <li>Ciclos de vida de um componente React</li>
    <li>Utilização da função setState</li>
    <li>Criação rotas, mapeando o caminho da URL com o componente correspondente, via Route</li>
+   <li>Estilização do projeto com CSS</li>
 </ul>
 
 
